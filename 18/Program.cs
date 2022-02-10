@@ -5,24 +5,38 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-Console.Write("Укажите значение операнда Х: 1 - если True, 2 - если False");
-int x = int.Parse (Console.ReadLine());
-Console.Write("Укажите значение операнда Y: 1 - если True, 2 - если False");
-int y = int.Parse (Console.ReadLine());
+Console.Write("Укажите значение операнда Х: 1 - если True, 2 - если False  ");
+int x1 = int.Parse (Console.ReadLine());
+Console.Write("Укажите значение операнда Y: 1 - если True, 2 - если False  ");
+int y1 = int.Parse (Console.ReadLine());
 
-bool c = x | y;
+bool b1, b2;
+b1 = true;
+b2 = false;
 
-    if ( x == 1, y ==1 )
+    if ( x1 == 1)
+        {
+        bool x = b1;
+        }    
+    if ( x1 ==2 )
+        {
+        bool x = b2;
+        }
+    if ( y1 == 1)
+        {
+        bool y = b1;
+        }
+    if ( y1 ==2 )
+        {
+        bool y = b2;
+        }
 
-if (arg1 < 8)
-{
-if (arg1 == 1)
-    Console.WriteLine ("Это совсем не выходной. Это понедельник");
-if (arg1 == 2)
-    Console.WriteLine ("Это не похоже на выходной. Это вторник");
-else
-Console.WriteLine ("Этот день недели - 32 мартобря.");
+ bool c = !(b1 | b2);
+ bool e = !b1 && !b2;
 
-int N = int.Parse (Console.ReadLine());
-for ( int i = 1; i <= N; i++ )
-Console.WriteLine ( i*i*i);
+    if ( c == e)
+    {
+        Console.WriteLine ("Это выражение имеет значение True");
+    }
+    else
+        Console.WriteLine ("Это выражение имеет значение Else.");
