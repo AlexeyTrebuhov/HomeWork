@@ -10,29 +10,30 @@ int x1 = int.Parse (Console.ReadLine());
 Console.Write("Укажите значение операнда Y: 1 - если True, 2 - если False  ");
 int y1 = int.Parse (Console.ReadLine());
 
+bool x, y;
 bool b1, b2;
 b1 = true;
 b2 = false;
 
     if ( x1 == 1)
         {
-        bool x = b1;
+        x = b1;
         }    
     if ( x1 ==2 )
         {
-        bool x = b2;
+        x = b2;
         }
     if ( y1 == 1)
         {
-        bool y = b1;
+        y = b1;
         }
     if ( y1 ==2 )
         {
-        bool y = b2;
+        y = b2;
         }
 
- bool c = !(b1 | b2);
- bool e = !b1 && !b2;
+ bool c = !( x | y );
+ bool e = !x && !y;
 
     if ( c == e)
     {
