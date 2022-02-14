@@ -1,24 +1,17 @@
 ﻿// Подсчитать сумму цифр в числе
 
-class Program
-   {
-      static void Main(string[] args)
-      {
-      Console.WriteLine("Введите целое число:");
-      var s = Console.ReadLine();
-      int i = 0; 
-      int count = s.Length; 
-      int sum = 0;
-      {
-           
-            while (i < count)
-            {
-                if (char.IsDigit(s[i]))
-                   sum += s[i++];
-            }
-            Console.WriteLine(sum);
- 
-        }
-    }
- }
+Console.Write("Введите любое число и нажмите клавишу Enter: ");
+double N = int.Parse (Console.ReadLine());
 
+double summ = 0;
+double x = 0;
+double i=0;
+
+for ( i=0; i <=N; i++)
+{
+   x = N % 10;
+   summ = summ + x;
+   N = (N - x) / 10;
+}
+
+Console.WriteLine ( summ);
