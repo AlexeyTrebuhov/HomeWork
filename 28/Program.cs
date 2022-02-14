@@ -1,7 +1,7 @@
 ﻿// Подсчитать сумму цифр в числе
 
 Console.Write("Введите любое число и нажмите клавишу Enter: ");
-double N = int.Parse (Console.ReadLine());
+double N = double.Parse (Console.ReadLine());
 
 double summ = 0;
 double x = 0;
