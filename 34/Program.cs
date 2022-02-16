@@ -1,30 +1,30 @@
 ﻿// Написать программу замену элементов массива на противоположные
 
 using static System.Console;
-using System;
+///using System.Collections.Generic;
+Console.WriteLine(" ");
+Console.Write("Введите значение длины массива и нажмите клавишу Enter: ");
+int x = int.Parse(Console.ReadLine());
 
-namespace massiv1
-{
-    class Program
+int[] table = new int[x];
+
+Console.WriteLine();
+for (int count = 0; count < x; count++)
     {
-        static void Main(string[] args)
-        {
-            //Console.WriteLine("Введите n");
-            //int n = int.Parse(Console.ReadLine());
-            int n = 0;
-            int[] a = new int[n];
-            int i = 0;
-            
-            Console.WriteLine("Введите {0}-й элемент", i + 1);
-            a[i] = int.Parse(Console.ReadLine());
-            
-            int k = 0;
-            for (int i = 0; i < a.Length; i++) 
-                if (a[i] % 2 == 0) 
-                    k++;  
-            Console.WriteLine(k);
-            Console.ReadKey();
- 
-        }
+    table[count] = new Random().Next(0, 100);
+    Console.Write($"{table[count] + " "}");
     }
-}
+WriteLine(" ");
+WriteLine(" ");
+WriteLine("Массив с противоположными знаками");
+WriteLine(" ");
+    int z = 0;
+    for (int i = 0; i < x; i++)
+    {
+    z = 0 - table[i];
+    table[i] = z;
+
+    Console.Write($"{table[i] + " "}");
+    }
+WriteLine(" ");
+WriteLine(" ");
