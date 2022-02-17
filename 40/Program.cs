@@ -5,28 +5,28 @@ Console.WriteLine(" ");
 Console.Write("Введите значение длины массива и нажмите клавишу Enter: ");
 int x = int.Parse(Console.ReadLine());
 
-int[] table = new int[x];
+double[] table = new double[x];
 
 Console.WriteLine();
 for (int count = 0; count < x; count++)
-{
-    table[count] = new Random().Next(-100, 100);
-    Console.Write($"{table[count] + " "}");
-}
+    {
+    table[count] = new Random ().Next(-100,100);
+    Console.Write("{0,6:F2}",table[count]);
+    }
 WriteLine(" ");
 WriteLine(" ");
 WriteLine("Разница между min и max значениями");
 WriteLine(" ");
 
-int min = 0;
-int max = 0;
+double min = 0;
+double max = 0;
 
 for (int i = 0; i < x; i++)
 {
-    if ( min > table[i])
+    if (min > table[i])
         min = table[i];
 
-    if ( max < table[i])
+    if (max < table[i])
         max = table[i];
 }
 
