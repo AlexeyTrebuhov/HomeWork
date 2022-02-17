@@ -1,7 +1,6 @@
 ﻿// Написать программу замену элементов массива на противоположные
 
 using static System.Console;
-///using System.Collections.Generic;
 Console.WriteLine(" ");
 Console.Write("Введите значение длины массива и нажмите клавишу Enter: ");
 int x = int.Parse(Console.ReadLine());
