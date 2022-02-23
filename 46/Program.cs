@@ -38,11 +38,26 @@ namespace inputArray
                 for (int j = 0; j < z; j++)
                 {
                     Console.Write(" mas[" + i + "," + j + "]: " + mas[i, j] + "\t");
+                    
                 }
                 Console.WriteLine();
             }
 
             Console.ReadLine();
+            
+
+Console.Write(" Введите коэффициент масштабирования ");
+int k = int.Parse(Console.ReadLine());
+//int[,] mas1 = new int[2, z];
+
+            for (int i = 0; i < 2; i++)
+            {
+                for (int j = 0; j < z; j++)
+                {
+                Console.Write(mas[i*k,j]);
+
+                }
+            }
         }
     }
 }
