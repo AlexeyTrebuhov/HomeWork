@@ -36,7 +36,7 @@ namespace inputArray
                 }
                 Console.WriteLine();
             }
-
+                Console.WriteLine();
                 Console.Write(" Введите коэффициент масштабирования ");
             
             int k = int.Parse(Console.ReadLine());
@@ -47,8 +47,8 @@ namespace inputArray
                     for (int j = 0; j < z; j++)
                     {
                     mas1[i, j] = mas[i, j] * k;
-                    ///Console.Write(mas1[i,j]);
-                    Console.Write("mas1[" + i + "," + j + "]: ");
+                    Console.Write(mas1[i,j] + "\t");
+                    ///Console.WriteLine("mas1[" + i + "," + j + "]: ");
                    }
                 Console.WriteLine();
             }
