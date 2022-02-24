@@ -72,24 +72,13 @@ for (int i = 0; i < x; i++)
     }
 }
 Console.WriteLine($"Цифры 0 в массиве {summ0}");
-Console.WriteLine();
 Console.WriteLine($"Цифры 1 в массиве {summ1}");
-Console.WriteLine();
 Console.WriteLine($"Цифры 2 в массиве {summ2}");
-Console.WriteLine();
 Console.WriteLine($"Цифры 3 в массиве {summ3}");
-Console.WriteLine();
 Console.WriteLine($"Цифры 4 в массиве {summ4}");
-Console.WriteLine();
 Console.WriteLine($"Цифры 5 в массиве {summ5}");
-Console.WriteLine();
 Console.WriteLine($"Цифры 6 в массиве {summ6}");
-Console.WriteLine();
 Console.WriteLine($"Цифры 7 в массиве {summ7}");
-Console.WriteLine();
 Console.WriteLine($"Цифры 8 в массиве {summ8}");
-Console.WriteLine();
 Console.WriteLine($"Цифры 9 в массиве {summ9}");
-Console.WriteLine();
-
 
