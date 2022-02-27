@@ -6,8 +6,11 @@ using static System.Console;
 using System.Collections.Generic;
 
 Console.WriteLine();
-int x = 3;
-int y = 7;
+Console.Write("Введите значение высоты массива и нажмите клавишу Enter: ");
+int x = int.Parse(Console.ReadLine());
+Console.Write("Введите значение ширины массива и нажмите клавишу Enter: ");
+int y = int.Parse(Console.ReadLine());
+
 int[,] array = new int[x, y];
 Random random = new Random();
 
@@ -17,35 +20,41 @@ for (int i = 0; i < x; i++)
     for (int j = 0; j < y; j++)
     {
         array[i, j] = new Random().Next(10, 99);
-        Console.Write($"{array[i, j] + " "}");
+        Console.Write($"{array[i, j] + "  "}");
     }
     Console.WriteLine();
 }
 Console.WriteLine();
 Console.WriteLine("Измененный массив");
-Console.WriteLine();
 
-int temp = array [0,0];
-for (int i = 0; i < x; i++)
+int temp = 0;
+
+for (int sum = 0; sum < y-1; sum++)
 {
-    for (int j = 0; j < y; j++)
-    {
-        if (temp < array [i,j])
+    for (int i = 0; i < x; i++)
         {
-            array [i,j] = temp;
+           for (int j = 0; j < y-1; j++)
+             {
+                      
+                if (array[i,j] < array [i,j+1])
+                    {
+                    temp = array[i, j + 1];
+                    array[i, j + 1] = array[i, j];
+                    array[i, j] = temp;
+                    
+                    }
+             }
         }
-
-     }
 }
 
+Console.WriteLine();
 
-for (int i = 0; i < array.GetLength(0); i++)//вывод массива на экран
+for (int i = 0; i < x; i++)
     {   
-    for (int j = 0; j < array.GetLength(1); j++)
+    for (int j = 0; j < y; j++)
         {
         Console.Write($"{array[i,j]}  ");
         }
     Console.WriteLine();
     }
 Console.ReadKey();
-
