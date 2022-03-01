@@ -1,5 +1,4 @@
-﻿// Дан целочисленный массив. Найти среднее арифметическое каждого из столбцов.
-//В прямоугольной матрице найти строку с наименьшей суммой элементов.
+﻿//В прямоугольной матрице найти строку с наименьшей суммой элементов.
 
 using System;
 using static System.Console;
@@ -17,7 +16,7 @@ for (int i = 0; i < x; i++)
 {
     for (int j = 0; j < y; j++)
     {
-        array[i, j] = new Random().Next(0, 9);
+        array[i, j] = new Random().Next(-9, 9);
         Console.Write($"{array[i, j] + "   "}");
     }
     Console.WriteLine();
@@ -29,20 +28,31 @@ Console.WriteLine();
 
 int sum = 0;
 int[] arraymin = new int[x];
+int temp = 0;
+int min = 0;
+int count = 0;
 
 for (int j = 0; j < y; j++)
 {
+    sum = 0;
     for (int i = 0; i < y; i++)
     {
     sum += array[j, i];
     }
-    Console.WriteLine("Столбец " + (j + 1) + " = " + sum);
-    sum = 0;    
-    arraymin[x] = sum;
+    Console.WriteLine(sum);
+    count = count + 1;
+
+     temp = sum;
+    if ( temp < min )
+    {
+     min = temp;
     }
-    
-   Console.WriteLine($"{arraymin[x]}");  
-   
+}
+Console.WriteLine();
+Console.WriteLine($" Строка с минимальной суммой цифр - ");
+Console.WriteLine($" номер {count}, считая сверху, сумма цифр у нее:  {min}");
+Console.WriteLine();
+
  
 
 
