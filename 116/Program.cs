@@ -1,10 +1,10 @@
 ﻿// Два друга идут навстречу, а собака бегает между ними
 
-int rasst = 10000;
-int V1 = 1;
-int V2 = 1;
-int Vsob = 5;
-int count = 0;
+int rasst = 2000;
+int V1 = 5;
+int V2 = 5;
+int Vsob = 15;
+double count = 0;
 int clock =0;
 int rasstost = 0;
 
