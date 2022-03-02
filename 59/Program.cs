@@ -31,6 +31,7 @@ int[] arraymin = new int[x];
 int temp = 0;
 int min = 0;
 int count = 0;
+int min1 = 0;
 
 for (int j = 0; j < y; j++)
 {
@@ -46,11 +47,12 @@ for (int j = 0; j < y; j++)
     if ( temp < min )
     {
      min = temp;
+     min1 = count;
     }
 }
 Console.WriteLine();
 Console.WriteLine($" Строка с минимальной суммой цифр - ");
-Console.WriteLine($" номер {count}, считая сверху, сумма цифр у нее:  {min}");
+Console.WriteLine($" номер {min1}, считая сверху, сумма цифр у нее:  {min}");
 Console.WriteLine();
 
  
