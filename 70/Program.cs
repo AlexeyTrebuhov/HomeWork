@@ -16,23 +16,19 @@ int count = 0;
 int temp1 = x;
 int temp2 = y;
 
+Console.WriteLine(x);
+Console.WriteLine(y);
+
 for ( int i = 0; i < n; i++)
     {
         sum1 = temp1 + temp2;
         temp1 = sum1;
         count = count + 1;
-        //if ( count == n)
-        //{
-       // Console.WriteLine(sum1);
-        //}
-
+       
         sum2 = temp1 + temp2;
         temp2 = sum2;
         count = count + 1;
-        //if ( count == n)
-       // {
-        //Console.WriteLine(sum2);
-        //}
+       
     Console.WriteLine(sum1);
     Console.WriteLine(sum2);
             
