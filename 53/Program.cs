@@ -28,15 +28,16 @@ Console.WriteLine (" потом по вертикали и нажмите Enter:
 
 string text = Console.ReadLine();
 var data = text.Split(" ");
-var w = text [0];
-var z = text [1];
+int w = text [0] - 48;
+int z = text [2] - 48;
 
-Console.Write($"Число с координатами {w} {z} находится вне матрицы");  
-
-
-if ((w <= x)|(z <= y))
-Console.Write($"Число с индексами {w} {z} - это {array[w,z]}");
-else
-Console.Write($"Число с координатами {w} {z} находится вне матрицы");
-
+if ((w <= x) & ( z <= y))
+{
+Console.WriteLine($"Число с индексами [{w}] и [{z}] - это {array[w,z]}");
+}
+if ((w > x) | (z > y))
+{
 Console.WriteLine();
+Console.Write($"Число с координатами {w} {z} находится вне матрицы");
+Console.WriteLine();
+}
