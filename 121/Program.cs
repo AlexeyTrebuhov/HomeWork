@@ -8,13 +8,12 @@ public class Program
 {
    public static void Main(string[] args)
 {
-    int n = 10;
-    for (int i = 0; i < n; i++)
-    {
-        string sBynary = string.Join("", Enumerable.Range(0, 3)
-            .Select((v, p) => p + 1 == i || p + 1 == n - i - 1 ? '1' : '0'));
+    int i = 4; // это задаем степень числа 2 ( прописываем двузначное число)
+   
+        string sBynary = string.Join("", Enumerable.Range(0, 9) // 0-9 - Это длина числа в двоичной системе
+            .Select((v, p) => p + 1 == i || p + 1 == 1 - i - 1 ? '1' : '0'));
         Console.WriteLine("{0} десятичное = {1} ", sBynary, Convert.ToInt32(sBynary, 2));
-    }
+   
     Console.ReadKey();
 }
 }
