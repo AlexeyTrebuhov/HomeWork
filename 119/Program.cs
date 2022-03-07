@@ -1,26 +1,20 @@
-﻿// 
-System.Console;
+﻿int a, b, N, z;
 
-static int Ack(int m, int n)
-{
-    if (m == 0)
-    {
-        return n + 1;
-    }
-    else if (n == 0)
-    {
-        return Ack(m - 1, 1);
-    }
-    else
-    {
-        return Ack(m - 1, Ack(m, n - 1));
-    }
+List<string> temp = new List<string>(Console.ReadLine().Split(' '));
+var s = new Random();
 
-}
-private void button13_Click(object sender, EventArgs e)
+if (int.TryParse(temp[0], out a) &
+    int.TryParse(temp[1], out b) &
+    int.TryParse(temp[2], out N))
 {
-    int a = int.Parse(textBox24.Text);
-    int b = int.Parse(textBox25.Text);
-    string eee = Ack(a, b).ToString();
-    label50.Text = eee;
+    temp.Clear();
+    for (var i = N; i > 0; --i)
+    {
+        z = s.Next(a, b);
+        int[] q = Console.ReadLine().Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+            .Select(int.Parse).ToArray();
+        temp.Add(z.ToString());
+    }
 }
+
+Console.WriteLine(string.Join(" ", temp));
