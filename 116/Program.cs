@@ -1,6 +1,6 @@
 ﻿// Два друга идут навстречу, а собака бегает между ними
 
-int rasst = 4000;
+int rasst = 1100;
 int V1 = 10;
 int V2 = 5;
 int Vsob = 15;
@@ -16,6 +16,12 @@ rasstost = rasst - clock*(V2 + V1);
 rasst = rasstost;
 count = count + 1;
 clock = rasst / (V1 + Vsob);
+
+if ( rasst <=10)
+{
+Console.WriteLine($"Собака пробежит между друзьями {count} раз");
+        Console.ReadKey();
+}
 rasstost = rasst - clock * (V2 + V1);
 rasst = rasstost;
 count = count + 1;
