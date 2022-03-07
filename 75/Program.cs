@@ -13,8 +13,8 @@ int n = int.Parse(Console.ReadLine());
 Console.Write("Введите длинну массива info и  нажмите клавишу Enter: ");
 int m = int.Parse(Console.ReadLine());
 
-int[] table1 = new int[n];
-int[] table2 = new int[m];
+int[] data = new int[n];
+int[] info = new int[m];
 int i = 0;
 int j = 0;
 
@@ -22,8 +22,8 @@ Console.Write($"Это массив data");
 Console.WriteLine();
 for (int count1 = 0; count1 < n; count1++)
     {
-        table1[count1] = new Random().Next(0, 2);
-        Console.Write($"{table1[count1]}");
+        data[count1] = new Random().Next(0, 2);
+        Console.Write($"{data[count1]}");
     }
 Console.WriteLine();
 
@@ -31,28 +31,33 @@ Console.Write($"Это массив info");
 Console.WriteLine();
 for (int count2 = 0; count2 < m; count2++)
 {
-    table2[count2] = new Random().Next(0,9);
-    Console.Write($"{table2[count2]}");
+    info[count2] = new Random().Next(0,9);
+    Console.Write($"{info[count2]}");
 }
 Console.WriteLine();
 
 Console.Write($"Это выходные данные в двоичном исчислении");
 Console.WriteLine();
 
-for (int count3 = 0; count3 < table2.Length; count3++) 
-    {    
-        for (int count4 = 0; count4 < table2[i]; count4++)
-        {
-        Console.Write(table1[j]);
+for (int count3 = 0; count3 < info.Length; count3++) // сколько массивов нужно создать
+{
+    int[] array = new int[info[i]]; //Создаем массив двоичных цифр из нужных элементов массива data
+                                     // длина массива = цифра элемента массива с индексом i 
 
-        /*int k = table1[j]; // это задаем степень числа 2 ( прописыва ем двузначное число)
-        string sBynary = string.Join("", Enumerable.Range(0, table2[i]) // 0-9 - Это длина числа 
-        .Select((v, p) => p + 1 == k || p + 1 == 1 - k - 1 ? '1' : '0'));
-        Console.WriteLine("{0} десятичное = {1} ", sBynary, Convert.ToInt32(sBynary, 2));
-        */
+        for (int count4 = 0; count4 < info[i]; count4++) // заполняем массив 
+        {
+        array [count4] = data[j];
+        Console.Write(array[count4]);
+        //Console.Write($"Массив array {array[count4] + " "}");
+        
+        //string bin = ($"{array[count4]}");
+        //int dec = Convert.ToInt32(bin, 2);
+        //Console.Write(dec);
         j = j + 1;
         }
     Console.WriteLine();
+    //Console.Write(array[count4]);
+    //Console.Write($"Массив array {array[table2] + " "}");
     i = i + 1; 
     }
 Console.WriteLine();
