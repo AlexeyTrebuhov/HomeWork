@@ -1,4 +1,6 @@
 ﻿//Даны два числа. Показать большее и меньшее число
+using ClassLib;
+Console.WriteLine(MyClass.Max(3,4));
 
 Console.Write("Введите первое число и нажмите клавишу Enter: ");
 string string1 = Console.ReadLine();
