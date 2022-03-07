@@ -15,6 +15,8 @@ int m = int.Parse(Console.ReadLine());
 
 int[] table1 = new int[n];
 int[] table2 = new int[m];
+int i = 0;
+int j = 0;
 
 Console.Write($"Это массив data");
 Console.WriteLine();
@@ -29,29 +31,33 @@ Console.Write($"Это массив info");
 Console.WriteLine();
 for (int count2 = 0; count2 < m; count2++)
 {
-    table2[count2] = new Random().Next(0, 2);
+    table2[count2] = new Random().Next(0,9);
     Console.Write($"{table2[count2]}");
 }
 Console.WriteLine();
 
 Console.Write($"Это выходные данные в двоичном исчислении");
 Console.WriteLine();
-Console.Write($"{table2[0]}");
+
+for (int count3 = 0; count3 < table2.Length; count3++) 
+    {    
+        for (int count4 = 0; count4 < table2[i]; count4++)
+        {
+        Console.Write(table1[j]);
+
+        /*int k = table1[j]; // это задаем степень числа 2 ( прописыва ем двузначное число)
+        string sBynary = string.Join("", Enumerable.Range(0, table2[i]) // 0-9 - Это длина числа 
+        .Select((v, p) => p + 1 == k || p + 1 == 1 - k - 1 ? '1' : '0'));
+        Console.WriteLine("{0} десятичное = {1} ", sBynary, Convert.ToInt32(sBynary, 2));
+        */
+        j = j + 1;
+        }
+    Console.WriteLine();
+    i = i + 1; 
+    }
+Console.WriteLine();
+
+Console.Write($"Это выходные данные в десятичном исчислении");
+Console.WriteLine();
 
 
-/*// Показать вторую цифру трёхзначного числа.
-
-Console.Write("Введите трехзначное число и нажмите клавишу Enter: ");
-string string1 = Console.ReadLine();
-int arg1 = Convert.ToInt32(string1);
-Console.WriteLine("Вторая цифра данного числа - это");
-Console.WriteLine(string1[1]);
-
-// Удалить вторую цифру трёхзначного числа
-
-Console.Write("Введите трехзначное число и нажмите клавишу Enter: ");
-string string1 = Console.ReadLine();
-int arg1 = Convert.ToInt32(string1);
-Console.WriteLine("Если удалить вторую цифру, получится число");
-Console.WriteLine(string1.Remove(1, 1));
-*/
