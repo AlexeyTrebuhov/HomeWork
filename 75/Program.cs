@@ -39,15 +39,13 @@ Console.WriteLine();
 Console.Write($"Это выходные данные в двоичном исчислении");
 Console.WriteLine();
 
-for (int count3 = 0; count3 < info.Length; count3++) // сколько массивов нужно создать
+for (int count3 = 0; count3 < info.Length; count3++) // сколько цифр нужно создать
 {
-    int[] array = new int[info[i]]; //Создаем массив двоичных цифр из нужных элементов массива data
-                                     // длина массива = цифра элемента массива с индексом i 
-
-        for (int count4 = 0; count4 < info[i]; count4++) // заполняем массив 
+        for (int count4 = 0; count4 < info[i]; count4++) // наполняем цифру знаками. Количество 
+                                                         // знаков = величине индекса i 
         {
-        array [count4] = data[j];
-        Console.Write(array[count4]);
+            int array = data[j];
+            Console.Write(array);
         //Console.Write($"Массив array {array[count4] + " "}");
         
         //string bin = ($"{array[count4]}");
