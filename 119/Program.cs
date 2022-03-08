@@ -1,20 +1,34 @@
-﻿int a, b, N, z;
+﻿// Вставка символа в строку ( по поиску элемента)
 
-List<string> temp = new List<string>(Console.ReadLine().Split(' '));
-var s = new Random();
-
-if (int.TryParse(temp[0], out a) &
-    int.TryParse(temp[1], out b) &
-    int.TryParse(temp[2], out N))
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+ 
+namespace ConsoleApplication10
 {
-    temp.Clear();
-    for (var i = N; i > 0; --i)
+    class Program
     {
-        z = s.Next(a, b);
-        int[] q = Console.ReadLine().Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
-            .Select(int.Parse).ToArray();
-        temp.Add(z.ToString());
+        static void Main(string[] args)
+        {
+            Console.Write("Введите строку S1: ");
+            String s1 = Console.ReadLine();
+            Console.Write("Введите строку S2: ");
+            String s2 = Console.ReadLine();
+            Console.Write("Введите символ для поиска: ");
+            String c = Console.ReadLine();
+            int count = s1.Length;
+            int pos;
+ 
+            while ((pos = s1.LastIndexOf(c, count, count)) != -1)
+            {
+                s1 = s1.Insert(pos + 1, s2); // Вставляем после найденного символа. 
+                //s1 = s1.Insert(pos, s2); // Вставляем перед найденным символом
+                count = pos - 1;
+            }
+ 
+            Console.WriteLine("Полученная строка: " + s1);
+            Console.ReadLine();
+        }
     }
 }
-
-Console.WriteLine(string.Join(" ", temp));
