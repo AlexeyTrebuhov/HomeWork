@@ -10,7 +10,7 @@ File.WriteAllText("db1.csv", s1);
 string s2 = "";
 for (int i = 0; i < 100; i++)
 {
-    s2 += $"{i}; Адрес={new Random().Next(1, 50)}; Комментарий={new Random().Next(0, 5)};\n";
+    s2 += $"{i}; Адрес={new Random().Next(1, 10)}; Комментарий={new Random().Next(0, 5)};\n";
 }
 File.WriteAllText("db2.csv", s2);
 
