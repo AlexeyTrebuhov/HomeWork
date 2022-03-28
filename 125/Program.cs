@@ -17,6 +17,6 @@ File.WriteAllText("db2.csv", s2);
 string s3 = "";
 for (int i = 1; i < 501; i++)
 {
-    s3 += $"{i}; id={new Random().Next(1, 101)}; Телефон={new Random().Next(1, 180)}; Уточнение={new Random().Next(11, 15)};\n";
+    s3 += $"{i}; {new Random().Next(1, 101)}; Телефон={new Random().Next(1, 180)}; Уточнение={new Random().Next(11, 15)};\n";
 }
 File.WriteAllText("db3.csv", s3);
