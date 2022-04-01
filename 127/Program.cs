@@ -1,17 +1,18 @@
-﻿// Задать массив из 8 элементов, заполненных нулями и единицами вывести их на экран
-
-using static System.Console;
-
-int[] table = new int[999];
-Console.WriteLine();
-Console.WriteLine("Это исходный массив чисел");
-for (int count = 0; count < 999; count++)
+﻿var A = new System.Collections.Generic.List<string>()
 {
-        table[count] = new Random().Next(0,9999);
+    "BF","C", "BA", "A", "IFD4", "I1989IGOR", "AGOR1989", "P1989PETRO", "PETRO1989", "S1989SERGEY", "SERGEY1989",
+        "A1989ANNA","ANNA1989", "TERAB1989", "T1989TERAB"
+};
 
-        Console.Write($"{table[count]} ");
-        //Console.WriteLine();
-} 
-    
-Console.WriteLine();
-//ReadLine();
+int L = 10;
+
+var resultList = A.TakeWhile(x => x.Length <= L)
+    .Where(str => Char.IsLetter(str.Last()))
+    .OrderByDescending(str => str.Length)
+    .ThenBy(str => str)
+    .ToList();
+
+foreach (var x in resultList)
+{
+    Console.WriteLine(x);
+}
