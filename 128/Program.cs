@@ -1,7 +1,18 @@
-﻿StreamReader f = new StreamReader("test.txt");
-while (!f.EndOfStream)
+﻿using System;
+using System.IO;
+using System.Text;
+
+class Test
 {
-    string s = f.ReadLine();
-    Console.WriteLine($"{s},");
+    public static void Main()
+    {
+        string path = @"D:\Temp\text.txt";
+
+        string[] readText = File.ReadAllLines(path, Encoding.UTF8);
+        foreach (string s in readText)
+        {
+            Console.WriteLine(s);
+        }
+
+    }
 }
-f.Close();
