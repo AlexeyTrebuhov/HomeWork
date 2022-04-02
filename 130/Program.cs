@@ -26,7 +26,6 @@ namespace wordscount
 
             Console.WriteLine("Это исходный массив строк, полученный из текстового файла");
             Console.WriteLine();
-
             int count = 0;
             string mini = "";
 
