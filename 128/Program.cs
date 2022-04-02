@@ -1,4 +1,24 @@
-﻿using System;
+﻿/*var A = new System.Collections.Generic.List<string>()
+{
+    "BF","C", "BA", "A", "IFD4", "I1989IGOR", "AGOR1989", "P1989PETRO", "PETRO1989", "S1989SERGEY", "SERGEY1989",
+        "A1989ANNA","ANNA1989", "TERAB1989", "T1989TERAB"
+};
+
+int L = 9;
+
+var resultList = A.TakeWhile(x => x.Length <= L);
+//.Where(str => Char.IsLetter(str.Last()))
+//.OrderByDescending(str => str.Length)
+// .ThenBy(str => str)
+// .ToList();
+
+foreach (var x in resultList)
+{
+    Console.WriteLine(x);
+}
+*/
+
+using System;
 using System.IO;
 using System.Text;
 
@@ -12,18 +32,21 @@ class Test
         string[] readText = File.ReadAllLines(path, Encoding.UTF8);
         foreach (string s in readText)
         {
+            
             Console.WriteLine(s);
                  
- int [] newarray = new int [5];
+ /*int [] array1 = new Random(5);
 
        for ( int i = 0; i < s.Length; i ++)
           {
          if (s.Length <= 3)
-        newarray[i] = s[i];
+        array1[i] = s[i];
          }
-        Console.WriteLine (s);
+        Console.WriteLine (array1);
+        */
        }
     }
 
     }
+    
 
