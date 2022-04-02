@@ -4,13 +4,13 @@
         "A1989ANNA","ANNA1989", "TERAB1989", "T1989TERAB"
 };
 
-int L = 10;
+int L = 9;
 
-var resultList = A.TakeWhile(x => x.Length <= L)
-    .Where(str => Char.IsLetter(str.Last()))
-    .OrderByDescending(str => str.Length)
-    .ThenBy(str => str)
-    .ToList();
+var resultList = A.TakeWhile(x => x.Length <= L);
+    //.Where(str => Char.IsLetter(str.Last()))
+    //.OrderByDescending(str => str.Length)
+   // .ThenBy(str => str)
+   // .ToList();
 
 foreach (var x in resultList)
 {
