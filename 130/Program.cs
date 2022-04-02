@@ -15,7 +15,7 @@ namespace wordscount
         {
             string s = "";
             string[] textMass;
-            StreamReader sr = new StreamReader("HomeWork\130\text.txt");
+            StreamReader sr = new StreamReader("text.txt");
 
             while (sr.EndOfStream != true)
             {
