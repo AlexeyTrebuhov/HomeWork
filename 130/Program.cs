@@ -28,6 +28,7 @@ namespace wordscount
             Console.WriteLine();
 
             int count = 0;
+            string mini = "";
 
             for (int i = 0; i < textMass.Length; i++)
             {
@@ -35,29 +36,19 @@ namespace wordscount
                 {
                     count = count + 1;
                 }
-                Console.WriteLine(textMass[i]);
+                if (textMass[i].Length < 4)
+                {
+                    mini = String.Concat(mini, " , ");
+                    mini = String.Concat(mini, textMass[i]);
+                }
 
+                Console.WriteLine(textMass[i]);
             }
             Console.WriteLine();
             Console.WriteLine($"Количество строк с тремя символами и меньше = {count}");
             Console.WriteLine();
             Console.WriteLine("Это обработанный массив строк");
-            Console.WriteLine();
-
-            string mini = "";
-
-            for (int i = 0; i < textMass.Length; i++)
-            {
-                if (textMass[i].Length < 4)
-                {
-                    mini = String.Concat(mini, " , ");
-
-                    mini = String.Concat(mini, textMass[i]);
-                }
-
-
-            }
-
+            Console.WriteLine();        
             Console.WriteLine(mini);
             Console.WriteLine();
         }
