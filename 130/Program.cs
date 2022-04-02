@@ -15,22 +15,51 @@ namespace wordscount
         {
             string s = "";
             string[] textMass;
-            StreamReader sr = new StreamReader(@"D:\Temp\text.txt");
+            StreamReader sr = new StreamReader("HomeWork\130\text.txt");
 
             while (sr.EndOfStream != true)
             {
                 s += sr.ReadLine();
             }
             textMass = s.Split(' ');
-        
+            Console.WriteLine();
+
+           Console.WriteLine("Это исходный массив строк, полученный из текстового файла");
+            Console.WriteLine();
+
+ int count = 0;
+
 for ( int i = 0; i < textMass.Length; i++)
 {
+    if ( textMass[i].Length < 4)
+    {
+        count = count + 1;
+    }
     Console.WriteLine (textMass[i]);
+    
 }
-            Console.WriteLine(textMass.Length);
+            Console.WriteLine();
+            Console.WriteLine($"Количество строк с тремя символами и меньше = {count}");
+            Console.WriteLine();
+            Console.WriteLine("Это обработанный массив строк");
+            Console.WriteLine();
 
-            sr.Close();
-            Console.ReadLine();
-        }
+            string mini = "";
+
+for (int i = 0; i < textMass.Length; i++)
+            {
+                if (textMass[i].Length < 4)
+                {
+                    mini = String.Concat (mini, " , ");
+
+                    mini = String.Concat(mini, textMass[i]);
+                }
+              
+
+            }
+
+            Console.WriteLine(mini);
+            Console.WriteLine();
+  }
     }
 }
