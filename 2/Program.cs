@@ -1,6 +1,7 @@
 ﻿//Даны два числа. Показать большее и меньшее число
+
 using ClassLib;
-Console.WriteLine(MyClass.Max(3,4));
+Console.WriteLine(MyClass.Max(3, 4));
 
 Console.Write("Введите первое число и нажмите клавишу Enter: ");
 string string1 = Console.ReadLine();
@@ -11,24 +12,27 @@ string string2 = Console.ReadLine();
 int arg2 = Convert.ToInt32(string2);
 int result = arg1 - arg2;
 
-    if (result == 0)
-    {
+if (result == 0)
+{
     Console.Write(" Числа ");
     Console.Write(arg1);
     Console.Write(" и ");
     Console.Write(arg2);
-    Console.Write(" одинаковые. Не морочьте людям голову");}
-            
-    else if (result > 0)
-    {
+    Console.Write(" одинаковые. Не морочьте людям голову");
+}
+
+else if (result > 0)
+{
     Console.Write(arg1);
     Console.Write("- большее число ");
     Console.Write(arg2);
-    Console.Write("- меньшее число");}
-    
-    else 
-    { 
+    Console.Write("- меньшее число");
+}
+
+else
+{
     Console.Write(arg2);
     Console.Write("- большее число ");
     Console.Write(arg1);
-    Console.Write("- меньшее число");}
+    Console.Write("- меньшее число");
+}
